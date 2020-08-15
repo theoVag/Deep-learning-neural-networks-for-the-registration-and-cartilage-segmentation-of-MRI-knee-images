@@ -1,4 +1,4 @@
-﻿# Deep learning neural networks for the registration and cartilage segmentation of MRI knee images!
+# Deep learning neural networks for the registration and cartilage segmentation of MRI knee images!
 
 This repository contains a basic part of the source code of my Master thesis with title "Deep learning neural networks for the registration and cartilage segmentation of MRI knee images" in Advanced Computer and Communication Systems with specialization field: Intelligent and Autonomous Systems-Computational Intelligence Methodologies and Applications.
 
@@ -15,15 +15,13 @@ In the next image you can se the main network structure used for the production 
 ### Training procedure
 The network has three outputs: the Moved (Transformed) Image, the Moved Segmentation map and the Flow field. In order to train the network keras framework needs to define for each output a loss function that will be part of a weighted sum of the final loss function. 
 - First, a variant of mutual information with a negative sign is used as the loss function for the Registration. The MI is computed between the Moved Image and the Fixed/Target Image. 
-$$
-    I(A,B) = H(A) + H(B) - H(A,B) = \sum_{\alpha \epsilon A}\sum_{b \epsilon B}p_{AB}(\alpha,b)\log(\dfrac{p_{AB}(\alpha,b)}{p_A(\alpha)p_B(b)})
-$$
 
+<img src="http://www.sciweavers.org/tex2img.php?eq=I%28A%2CB%29%20%3D%20H%28A%29%20%2B%20H%28B%29%20-%20H%28A%2CB%29%20%3D%20%5Csum_%7B%5Calpha%20%5Cepsilon%20A%7D%5Csum_%7Bb%20%5Cepsilon%20B%7Dp_%7BAB%7D%28%5Calpha%2Cb%29%5Clog%28%5Cdfrac%7Bp_%7BAB%7D%28%5Calpha%2Cb%29%7D%7Bp_A%28%5Calpha%29p_B%28b%29%7D%29&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0" align="center" border="0" alt="I(A,B) = H(A) + H(B) - H(A,B) = \sum_{\alpha \epsilon A}\sum_{b \epsilon B}p_{AB}(\alpha,b)\log(\dfrac{p_{AB}(\alpha,b)}{p_A(\alpha)p_B(b)})" width="546" height="50" />
 - The second term is a Regularization term from *. This term encourage the network to produce smooth deformations with less holes inside the anatomical structures.
-$$
-L_{smooth}(\phi) = \sum_{p\epsilon N}||\nabla \textbf{u(p)}||^2
-$$
-where $\frac{\delta \textbf{u(p)}}{\delta x} \approx \textbf{u}(p_x+1,p_y,p_z)-\textbf{u}(p_x,p_y,p_z)$
+<img src="http://www.sciweavers.org/tex2img.php?eq=L_%7Bsmooth%7D%28%5Cphi%29%20%3D%20%5Csum_%7Bp%5Cepsilon%20N%7D%7C%7C%5Cnabla%20%5Ctextbf%7Bu%28p%29%7D%7C%7C%5E2&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0" align="center" border="0" alt="L_{smooth}(\phi) = \sum_{p\epsilon N}||\nabla \textbf{u(p)}||^2" width="217" height="42" />
+
+where 
+<img src="http://www.sciweavers.org/tex2img.php?eq=%5Cfrac%7B%5Cdelta%20%5Ctextbf%7Bu%28p%29%7D%7D%7B%5Cdelta%20x%7D%20%5Capprox%20%5Ctextbf%7Bu%7D%28p_x%2B1%2Cp_y%2Cp_z%29-%5Ctextbf%7Bu%7D%28p_x%2Cp_y%2Cp_z%29&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0" align="center" border="0" alt="\frac{\delta \textbf{u(p)}}{\delta x} \approx \textbf{u}(p_x+1,p_y,p_z)-\textbf{u}(p_x,p_y,p_z)" width="325" height="43" />
 
 - The third term is a metric which indicates the amount of overlap between the ground truth segmentation map of the fixed image and the segmentation map produced by the network. For this purpose a weighted average dice is used. Simple dice: $DSC(A,B) = \frac{2(A \cap B)}{(A+B)}$ 
 
@@ -197,6 +195,7 @@ Yeghiazaryan, Varduhi, and Irina Voiculescu. 2015. “An Overview of Current Eva
 Zitová, Barbara, and Jan Flusser. 2003. “Image Registration Methods: A Survey.” _Image and Vision Computing_ 21 (October): 977–1000. [https://doi.org/10.1016/S0262-8856(03)00137-9](https://doi.org/10.1016/S0262-8856(03)00137-9).
 
 Zou, Kelly, Simon Warfield, Aditya Bharatha, Clare Tempany, Michael Kaus, Steven Haker, William Wells, Ferenc Jolesz, and Ron Kikinis. 2004. “Statistical Validation of Image Segmentation Quality Based on a Spatial Overlap Index.” _Academic Radiology_ 11 (February): 178–89. [https://doi.org/10.1016/S1076-6332(03)00671-8](https://doi.org/10.1016/S1076-6332(03)00671-8).
+
 
 
 
