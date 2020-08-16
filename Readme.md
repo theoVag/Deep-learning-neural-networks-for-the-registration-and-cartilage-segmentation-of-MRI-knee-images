@@ -110,6 +110,8 @@ OAI DATASET https://www.nia.nih.gov/research/resource/osteoarthritis-initiative-
 
 Ambellan, Felix, Alexander Tack, Moritz Ehlke, and Stefan Zachow. 2018. “Automated Segmentation of Knee Bone and Cartilage Combining Statistical Shape Knowledge and Convolutional Neural Networks: Data from the Osteoarthritis Initiative.” _Medical Image Analysis_. [https://doi.org/10.1016/j.media.2018.11.009](https://doi.org/10.1016/j.media.2018.11.009).
 
+Xu, Zhenlin, and Marc Niethammer. 2019. “DeepAtlas: Joint Semi-Supervised Learning of Image Registration and Segmentation.” _CoRR_ abs/1904.08465. [http://arxiv.org/abs/1904.08465](http://arxiv.org/abs/1904.08465).
+
 Argyriou, Vasileios, Jesus Martinez Del Rincon, Barbara Villarini, and Alexis Roche. 2015. _Image, Video and 3D Data Registration: Medical, Satellite and Video Processing Applications with Quality Metrics_. 1st ed. Wiley Publishing.
 
 Avants, Brian, Nick Tustison, and Gang Song. 2008. “Advanced Normalization Tools (Ants).” _Insight J_ 1–35 (November).
@@ -189,8 +191,6 @@ Wang, Hongzhi, Jung W Suh, Sandhitsu R Das, John B Pluta, Caryne Craige, and Pau
 Warfield, Simon K., Kelly H. Zou, and William M. Wells. 2002. “Validation of Image Segmentation and Expert Quality with an Expectation-Maximization Algorithm.” In _Medical Image Computing and Computer-Assisted Intervention — Miccai 2002_, edited by Takeyoshi Dohi and Ron Kikinis, 298–306. Berlin, Heidelberg: Springer Berlin Heidelberg.
 
 Warfield, Simon, Kelly Zou, and William Wells. 2004. “Simultaneous Truth and Performance Level Estimation (Staple): An Algorithm for the Validation of Image Segmentation.” _IEEE Transactions on Medical Imaging_ 23 (August): 903–21. [https://doi.org/10.1109/TMI.2004.828354](https://doi.org/10.1109/TMI.2004.828354).
-
-Xu, Zhenlin, and Marc Niethammer. 2019. “DeepAtlas: Joint Semi-Supervised Learning of Image Registration and Segmentation.” _CoRR_ abs/1904.08465. [http://arxiv.org/abs/1904.08465](http://arxiv.org/abs/1904.08465).
 
 Yeghiazaryan, Varduhi, and Irina Voiculescu. 2015. “An Overview of Current Evaluation Methods Used in Medical Image Segmentation.” RR-15-08. Oxford, UK: Department of Computer Science.
 
