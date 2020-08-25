@@ -87,14 +87,17 @@ In this section, an additional module of local learning is described. With the n
 
 N: Size of training set
 
-### Below, you can see some examples of the output of the model. 
+### Output examples
+
+Below, you can see some examples of the output of the model. 
 1st line of plot: the moving image (or Atlas) is depicted
 2nd line : fixed or target image
 3rd line: Output of the network
 Flow representation is extracted by feeding the flow, produced by the network with the inputs presented,and a generated grid as moving image to a Spatial Transformation Network. In other words, a generated grid is transformed by the flow field that the network produced in order to register the pair of images presented.
-The first image refers to the binary problem (Background - Cartilages) and the second to the multi - class (Background - Bones - Cartilages)
+#### Binary problem (Background - Cartilages)
 ![flow binary](images/res_flow.png)
 
+#### Multi - class problem (Background - Bones - Cartilages)
 ![resm2](images/res_m2.jpg)
 
 ## Files
